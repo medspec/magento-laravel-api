@@ -8,9 +8,9 @@ class Categories extends AbstractApi
     /**
      * The root category.
      */
-    public function root()
+    public function tree($depth = 10)
     {
-        return $this->get('/categories?depth=0');
+        return $this->get('/categories?depth='. $depth);
     }
 
     /**
