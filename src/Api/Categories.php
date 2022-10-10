@@ -28,6 +28,8 @@ class Categories extends AbstractApi
         ]));
     }
 
+
+
     /**
      * Get info about categories by id.
      *
