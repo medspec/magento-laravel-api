@@ -28,7 +28,28 @@ class Categories extends AbstractApi
         ]));
     }
 
+    /**
+     * Get info about categories by id.
+     *
+     * @param  string  $id
+     * @return array
+     */
+    public function show($id)
+    {
+        return $this->get('/categories/'.$id);
+    }
 
+    /**
+     * Edit the categories by the specified if.
+     *
+     * @param  string  $id
+     * @param  array  $body
+     * @return array
+     */
+    public function edit($id, $body = [])
+    {
+        return $this->put('/categories/'.$id, $body);
+    }
 
     /**
      * Get products assigned to category.
